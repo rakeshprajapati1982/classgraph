@@ -1,0 +1,22 @@
+// Apply the java-library plugin to add support for Java Library
+apply plugin: 'java-library'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    compile group: 'io.github.classgraph', name: 'classgraph', version: '4.8.46'
+    
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'    
+
+}
+
